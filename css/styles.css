@@ -4,6 +4,11 @@
   --color-black:       #000000;
   --color-green-dark:  #1F7A36;
   --color-green-light: #3DB54A;
+  --color-white:       #FFFFFF;
+  --color-gray-light:  #F5F5F5;
+  --color-gray-mid:    #CCCCCC;
+  --color-gray-text:   #555555;
+  --color-focus-ring:  rgba(31, 122, 54, 0.2);
 }
 
 *, *::before, *::after {
