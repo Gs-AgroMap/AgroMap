@@ -39,7 +39,7 @@
     object-fit: cover;
 }
 
-/* Jornada */
+
 .sobre-jornada h2 {
     font-size: 28px;
     font-weight: 700;
@@ -111,7 +111,7 @@
     z-index: 1;
     position: relative;
 }
-/* Solução */
+
 .sobre-solucao {
     display: flex;
     align-items: center;
@@ -169,7 +169,7 @@
     object-fit: cover;
 }
 
-/* Stats */
+
 .sobre-stats {
     display: flex;
     align-items: center;
