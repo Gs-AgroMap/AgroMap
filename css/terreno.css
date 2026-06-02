@@ -34,7 +34,7 @@
   line-height: 1.1;
 }
 
-.terreno-stat__value span {
+.terreno-stat__value span:last-child {
   font-size: 1.4rem;
   font-weight: 400;
 }
