@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meu Terreno</title>
   <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/terreno.css">
 </head>
 
 <body>
@@ -47,7 +48,33 @@
       <h1 class="page-header__title">Meu terreno</h1>
       <p class="page-header__subtitle">Delimite e visualize seu terreno</p>
     </section>
-    <section>
+
+    <section class="terreno-layout">
+
+      <div class="card terreno-card">
+        <h2 class="card__title">Informações do terreno</h2>
+
+        <label class="form-label">Nome:</label>
+        <input class="form-input" type="text" placeholder="Digite aqui o nome da fazenda...">
+
+        <label class="form-label">Digite a largura e o comprimento do terreno:</label>
+        <input class="form-input" type="text" placeholder="Digite aqui a largura...">
+        <input class="form-input" type="text" placeholder="Digite aqui o comprimento...">
+
+        <button class="btn-primary">Atualizar informações</button>
+
+        <div class="terreno-stat">
+          <p class="terreno-stat__label">Area total:</p>
+          <p class="terreno-stat__value">00<span>m²</span></p>
+        </div>
+
+        <div class="terreno-stat">
+          <p class="terreno-stat__label">Perimetro total:</p>
+          <p class="terreno-stat__value">000<span>m</span></p>
+        </div>
+      </section>
+
+    
 
 
 
@@ -70,8 +97,9 @@
           attribution: 'Tiles © Esri'
         }).addTo(map);
       </script>
-    </section>
+    
 
+    </div><!-- fim .terreno-layout -->
 
   </main>
 
