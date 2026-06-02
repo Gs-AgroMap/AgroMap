@@ -10,6 +10,13 @@
   flex-shrink: 0;
 }
 
+.terreno-map {
+  flex: 1;
+  min-height: 450px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
 .terreno-stat {
   margin-top: 20px;
 }

@@ -7,6 +7,7 @@
   <title>Meu Terreno</title>
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/terreno.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 
 <body>
@@ -72,37 +73,23 @@
           <p class="terreno-stat__label">Perimetro total:</p>
           <p class="terreno-stat__value">000<span>m</span></p>
         </div>
-      </section>
+      </div>
 
-    
-
-
-
+      <div id="map" class="terreno-map">
+      </div>
 
 
-
-      <!-- Adicionando mapa -->
-      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-      
-      <div id="map" style="height: 400px;"></div>
-
-      
-      <script>
-        const map = L.map('map').setView([-23.5505, -46.6333], 13); // São Paulo
-
-        // Camada de satélite (Esri, gratuito)
-        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-          attribution: 'Tiles © Esri'
-        }).addTo(map);
-      </script>
-    
-
-    </div><!-- fim .terreno-layout -->
-
+    </section>
   </main>
+  <!-- Esse é o mapa  -->   
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([-14.1400, -47.5200 ], 13);
 
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles © Esri'
+    }).addTo(map);
+  </script>
   <script src="../js/nav.js"></script>
 </body>
 
