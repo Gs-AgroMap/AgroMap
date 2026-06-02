@@ -56,22 +56,22 @@
         <h2 class="card__title">Informações do terreno</h2>
 
         <label class="form-label">Nome:</label>
-        <input class="form-input" type="text" placeholder="Digite aqui o nome da fazenda...">
+        <input class="form-input"  id="nome"type="text" placeholder="Digite aqui o nome da fazenda...">
 
         <label class="form-label">Digite a largura e o comprimento do terreno:</label>
-        <input class="form-input" type="text" placeholder="Digite aqui a largura...">
-        <input class="form-input" type="text" placeholder="Digite aqui o comprimento...">
+        <input class="form-input" id="largura" type="number" placeholder="Digite aqui a largura...">
+        <input class="form-input" id="comprimento" type="number" placeholder="Digite aqui o comprimento...">
 
-        <button class="btn-primary">Atualizar informações</button>
+        <button class="btn-primary" id="botao">Atualizar informações</button>
 
         <div class="terreno-stat">
           <p class="terreno-stat__label">Area total:</p>
-          <p class="terreno-stat__value">00<span>m²</span></p>
+          <p class="terreno-stat__value"><span id="area">00</span><span>m²</span></p>
         </div>
 
         <div class="terreno-stat">
           <p class="terreno-stat__label">Perimetro total:</p>
-          <p class="terreno-stat__value">000<span>m</span></p>
+          <p class="terreno-stat__value"><span id="perimetro">000</span><span>m</span></p>
         </div>
       </div>
 
@@ -91,6 +91,7 @@
     }).addTo(map);
   </script>
   <script src="../js/nav.js"></script>
+  <script src="../js/terreno.js"></script>
 </body>
 
 </html>
