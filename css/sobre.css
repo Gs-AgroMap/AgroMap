@@ -1,0 +1,113 @@
+/* Hero */
+.sobre-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 48px 32px;
+}
+
+.sobre-hero {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    margin-bottom: 64px;
+}
+
+.sobre-hero-text {
+    flex: 1;
+}
+
+.sobre-hero-text h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.sobre-subtitulo {
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.sobre-hero-text h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.sobre-hero-img img {
+    width: 380px;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+/* Jornada */
+.sobre-jornada h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.jornada-timeline {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    position: relative;
+}
+
+.jornada-timeline::before {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    right: 32px;
+    height: 2px;
+    background: #000;
+    z-index: 0;
+}
+
+.jornada-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.jornada-icone {
+    width: 64px;
+    height: 64px;
+    background: var(--color-green-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: white;
+}
+
+.jornada-item p {
+    font-size: 13px;
+    max-width: 120px;
+}
+.jornada-icone img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+.jornada-timeline::before {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    right: 32px;
+    height: 1.5px;
+    background: #888;
+    z-index: 0;
+}
+.jornada-icone {
+    z-index: 1;
+    position: relative;
+}
