@@ -1,230 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+#conteudo-principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Formulário */
 .contato-section {
+  width: 100%;
   max-width: 480px;
-  margin: 2rem auto;
-  padding: 0 1.5rem;
+ 
+}
+
+.contato-header {
+  margin-bottom: 2rem;
 }
 
 .contato-header h1 {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--color-black);
-  margin-bottom: 0.25rem;
 }
 
 .contato-header p {
-  color: var(--color-gray-text);
-  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.25rem;
 }
 
 .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
   margin-bottom: 1.25rem;
 }
 
 .form-group label {
-  display: block;
   font-size: 0.9rem;
-  color: var(--color-black);
-  margin-bottom: 0.4rem;
+  font-weight: 500;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 0.75rem 1rem;
-  border: 1px solid var(--color-gray-mid);
+  border: 1px solid #ddd;
   border-radius: 8px;
+  font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
-  font-family: inherit;
-  color: var(--color-black);
-  background: var(--color-white);
   outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: var(--color-gray-mid);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: var(--color-green-dark);
-  box-shadow: 0 0 0 3px var(--color-focus-ring);
+  transition: border-color 0.2s;
 }
 
 .form-group textarea {
   resize: vertical;
-  min-height: 140px;
 }
 
-.btn-enviar {
+
+
+/* Logo */
+.logo-contato img {
+  max-width: 350px;
   width: 100%;
-  padding: 0.85rem;
-  background: var(--color-green-dark);
-  color: var(--color-white);
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.2s;
 }
 
-.btn-enviar:hover {
-  background: var(--color-green-light);
-}
-
-.btn-enviar:active {
-  transform: scale(0.98);
-}
-
-/* -- estiliza o js -- */
-.feedback {
-  margin-top: 1rem;
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-align: center;
-  animation: fadeIn 0.3s ease;
-}
-
-.feedback--sucesso {
-  background: #e6f4ea;
-  color: var(--color-green-dark);
-  border: 1px solid var(--color-green-light);
-}
-
-.feedback--erro {
-  background: #fdecea;
-  color: #b71c1c;
-  border: 1px solid #ef9a9a;
-}
-
-
-/* Titulos global, só jogar o id e boa  */
-.page-header {
-  padding: 48px 32px 32px;
-}
-
-.page-header__title {
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: var(--color-black);
-  margin-bottom: 6px;
-  text-align: left;
-  padding-left: 9rem;
-}
-
-.page-header__subtitle {
-  font-size: 1.5rem;
-  color: #6b7280;
-  font-weight: 400;
-  text-align: left;
-  padding-left: 9rem;
-}
-
-/* ── Card — padrão global reutilizado em todas as páginas ── */
-.card {
-  background: #f3f4f6;
-  border-radius: 16px;
-  padding: 32px 28px;
-}
-
-.card__title {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--color-black);
-  margin-bottom: 20px;
-}
-
-/* ── Formulário global ── */
-.form-label {
-  display: block;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--color-black);
-  margin-bottom: 6px;
-}
-
-.form-input {
-  width: 100%;
-  padding: 10px 14px;
-  border: 1.5px solid #d1d5db;
-  border-radius: 8px;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.95rem;
-  color: #374151;
-  background: #fff;
-  outline: none;
-  transition: border-color 0.2s;
-  margin-bottom: 12px;
-}
-
-.form-input::placeholder {
-  color: #9ca3af;
-}
-
-.form-input:focus {
-  border-color: var(--color-green-dark);
-}
-
-/* ── Botão primário global ── */
-.btn-primary {
-  display: block;
-  width: 100%;
-  padding: 14px;
-  background: var(--color-green-dark);
-  color: #fff;
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.2s;
-  text-align: center;
-}
-
-.btn-primary:hover {
-  background: var(--color-green-light);
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-6px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* ── Responsive ── */
+/* Responsivo */
 @media (max-width: 768px) {
-  .navbar-toggle {
-    display: flex;
-  }
-
-  .navbar-nav {
-    display: none;
+  #conteudo-principal {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    position: absolute;
-    top: 64px;
-    left: 0;
-    right: 0;
-    background: #fff;
-    border-bottom: 1.5px solid #e5e7eb;
-    padding: 12px 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  }
-
-  .navbar-nav.open {
-    display: flex;
-  }
-
-  .nav-link {
-    width: 100%;
-    padding: 12px 24px;
-    border-radius: 0;
+    gap: 2rem;
   }
 }
