@@ -5,14 +5,20 @@
   align-items: flex-start;
 }
 
+.terreno-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
 .terreno-card {
   width: 600px;
-  flex-shrink: 0;
 }
 
 .terreno-map {
   flex: 1;
-  min-height: 450px;
+  min-height: 900px;
   border-radius: 12px;
   overflow: hidden;
 }
