@@ -33,7 +33,7 @@ body {
   border-bottom: 1.5px solid #e5e7eb;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .navbar-logo {
@@ -201,6 +201,26 @@ body {
 }
 
 .form-input:focus {
+  border-color: var(--color-green-dark);
+}
+
+.form-select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #374151;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+  margin-bottom: 12px;
+  cursor: pointer;
+  appearance: auto;
+}
+
+.form-select:focus {
   border-color: var(--color-green-dark);
 }
 

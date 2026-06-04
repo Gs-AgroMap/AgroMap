@@ -19,3 +19,14 @@ botao.addEventListener("click", function () {
 
     alert("Fazenda salva: " + nome);
 });
+
+const inputCidade = document.getElementById("cidade");
+const selectEstado = document.getElementById("estado");
+const infoCidade = document.getElementById("info-cidade");
+const infoEstado = document.getElementById("info-estado");
+const botaoLocalizacao = document.getElementById("botao-localizacao");
+
+botaoLocalizacao.addEventListener("click", function () {
+    infoCidade.textContent = inputCidade.value || "xxxx";
+    infoEstado.textContent = selectEstado.value || "xx";
+});

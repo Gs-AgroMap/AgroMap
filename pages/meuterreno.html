@@ -52,32 +52,77 @@
 
     <section class="terreno-layout">
 
-      <div class="card terreno-card">
-        <h2 class="card__title">Informações do terreno</h2>
+      <div class="terreno-cards">
+        <div class="card terreno-card">
+          <h2 class="card__title">Informações do terreno</h2>
 
-        <label class="form-label">Nome:</label>
-        <input class="form-input"  id="nome"type="text" placeholder="Digite aqui o nome da fazenda...">
+          <label class="form-label">Nome:</label>
+          <input class="form-input" id="nome" type="text" placeholder="Digite aqui o nome da fazenda...">
 
-        <label class="form-label">Digite a largura e o comprimento do terreno:</label>
-        <input class="form-input" id="largura" type="number" placeholder="Digite aqui a largura...">
-        <input class="form-input" id="comprimento" type="number" placeholder="Digite aqui o comprimento...">
+          <label class="form-label">Digite a largura e o comprimento do terreno:</label>
+          <input class="form-input" id="largura" type="number" placeholder="Digite aqui a largura...">
+          <input class="form-input" id="comprimento" type="number" placeholder="Digite aqui o comprimento...">
 
-        <button class="btn-primary" id="botao">Atualizar informações</button>
+          <button class="btn-primary" id="botao">Atualizar informações</button>
 
-        <div class="terreno-stat">
-          <p class="terreno-stat__label">Area total:</p>
-          <p class="terreno-stat__value"><span id="area">00</span><span>m²</span></p>
+          <div class="terreno-stat">
+            <p class="terreno-stat__label">Area total:</p>
+            <p class="terreno-stat__value"><span id="area">00</span><span>m²</span></p>
+          </div>
+
+          <div class="terreno-stat">
+            <p class="terreno-stat__label">Perimetro total:</p>
+            <p class="terreno-stat__value"><span id="perimetro">000</span><span>m</span></p>
+          </div>
         </div>
 
-        <div class="terreno-stat">
-          <p class="terreno-stat__label">Perimetro total:</p>
-          <p class="terreno-stat__value"><span id="perimetro">000</span><span>m</span></p>
+        <div class="card terreno-card">
+          <h2 class="card__title">Localização</h2>
+
+          <label class="form-label" for="cidade">Digite a cidade:</label>
+          <input class="form-input" id="cidade" type="text" placeholder="ex:">
+
+          <label class="form-label" for="estado">Escolha o estado:</label>
+          <select class="form-select" id="estado">
+            <option value="" disabled selected>selecione:</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+          </select>
+          <button class="btn-primary" id="botao-localizacao">Atualizar localização</button>
+          <div class="terreno-stat">
+            <p class="terreno-stat__label">Informações:</p>
+            <p>Cidade: <span id="info-cidade">xxxx</span></p>
+            <p>Estado: <span id="info-estado">xx</span></p>
+          </div>
         </div>
       </div>
 
-      <div id="map" class="terreno-map">
-      </div>
-
+      <div id="map" class="terreno-map"></div>
 
     </section>
   </main>
