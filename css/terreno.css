@@ -16,8 +16,13 @@
   width: 600px;
 }
 
-.terreno-map {
+.terreno-map-wrapper {
   flex: 1;
+  min-width: 0;
+}
+
+.terreno-map {
+  width: 100%;
   min-height: 900px;
   border-radius: 12px;
   overflow: hidden;
@@ -43,4 +48,11 @@
 .terreno-stat__value span:last-child {
   font-size: 1.4rem;
   font-weight: 400;
+}
+
+#disclaimer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 8px;
 }
