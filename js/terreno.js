@@ -17,6 +17,8 @@ botao.addEventListener("click", function () {
     printArea.textContent = area;
     printPerimetro.textContent = perimetro;
 
+    localStorage.setItem('agromap_area', area);
+
     alert("Fazenda salva: " + nome);
 });
 
