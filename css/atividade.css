@@ -1,0 +1,142 @@
+/* ── Atividades — layout ── */
+.atividade-section {
+  padding: 0 9rem;
+  margin-bottom: 32px;
+}
+
+/* Form: 3 colunas (Nome | Descrição | Área) */
+.atividade-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 0 24px;
+  align-items: start;
+}
+
+.atividade-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.atividade-field .form-input {
+  margin-bottom: 0;
+  flex: 1;
+}
+
+.atividade-textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+/* Botão centralizado — sobrescreve width: 100% do btn-primary global */
+.atividade-btn-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 8px;
+}
+
+.atividade-btn-wrap .btn-primary {
+  display: inline-block;
+  width: auto;
+  min-width: 220px;
+  padding: 13px 56px;
+}
+
+/* Grid de cards de atividade */
+.atividade-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  gap: 20px;
+}
+
+/* Card individual */
+.atividade-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  box-shadow: inset 4px 0 0 var(--color-green-dark);
+}
+
+.atividade-card__name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 16px;
+  grid-column: 1 / -1;
+}
+
+.atividade-stat__label {
+  font-size: 0.9rem;
+  color: var(--color-gray-text);
+  margin-bottom: 4px;
+}
+
+.atividade-stat__value {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--color-black);
+  line-height: 1.1;
+}
+
+.atividade-stat__value span:last-child {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.atividade-card__right {
+  border-left: 1.5px solid #e5e7eb;
+  padding-left: 24px;
+}
+
+.atividade-card__desc {
+  font-size: 0.9rem;
+  color: var(--color-gray-text);
+  line-height: 1.65;
+  margin-top: 4px;
+}
+
+
+#btn-criar-atividade{
+    width: 1700px;
+}
+
+/* ── Responsivo ── */
+@media (max-width: 1024px) {
+  .atividade-section {
+    padding: 0 2rem;
+  }
+
+  .atividade-form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .atividade-field:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .atividade-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .atividade-field:last-child {
+    grid-column: auto;
+  }
+
+  .atividade-list {
+    grid-template-columns: 1fr;
+  }
+
+  .atividade-card {
+    grid-template-columns: 1fr;
+  }
+
+  .atividade-card__right {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1.5px solid #e5e7eb;
+    padding-top: 16px;
+    margin-top: 8px;
+  }
+}
