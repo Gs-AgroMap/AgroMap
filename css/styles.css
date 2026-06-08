@@ -9,6 +9,7 @@
   --color-gray-mid:    #CCCCCC;
   --color-gray-text:   #555555;
   --color-focus-ring:  rgba(31, 122, 54, 0.2);
+  --color-gray-home: #747474;
 }
 
 *, *::before, *::after {
