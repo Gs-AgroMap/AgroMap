@@ -215,32 +215,77 @@
     margin-right: auto;
 }
 @media (max-width: 768px) {
-  .navbar-toggle {
-    display: flex;
-  }
+    .sobre-container {
+        padding: 32px 20px;
+    }
 
-  .navbar-nav {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    position: absolute;
-    top: 64px;
-    left: 0;
-    right: 0;
-    background: #fff;
-    border-bottom: 1.5px solid #e5e7eb;
-    padding: 12px 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  }
+    .sobre-hero {
+        flex-direction: column;
+        gap: 32px;
+        margin-bottom: 48px;
+    }
 
-  .navbar-nav.open {
-    display: flex;
-  }
+    .sobre-hero-img img {
+        width: 100%;
+    }
 
-  .nav-link {
-    width: 100%;
-    padding: 12px 24px;
-    border-radius: 0;
-  }
+    .sobre-hero-text h1 {
+        font-size: 28px;
+    }
+
+    .jornada-timeline {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .jornada-timeline::before {
+        display: none;
+    }
+
+    .jornada-item p {
+        max-width: 200px;
+    }
+
+    .sobre-solucao {
+        flex-direction: column;
+        padding: 32px 24px;
+        gap: 32px;
+    }
+
+    .solucao-img img {
+        width: 100%;
+    }
+
+    .sobre-stats {
+        flex-direction: column;
+        width: 100%;
+        gap: 24px;
+        padding: 32px 24px;
+    }
+
+    .stat-divider {
+        width: 80%;
+        height: 1.5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sobre-hero-text h1 {
+        font-size: 24px;
+    }
+
+    .sobre-jornada h2,
+    .solucao-texto h2 {
+        font-size: 22px;
+    }
+
+    .sobre-solucao {
+        padding: 24px 16px;
+        border-radius: 16px;
+    }
+
+    .stat-item strong {
+        font-size: 20px;
+    }
 }

@@ -56,3 +56,58 @@
   color: #888;
   margin-top: 8px;
 }
+@media (max-width: 1024px) {
+  .terreno-layout {
+    padding: 40px 2rem;
+  }
+
+  .terreno-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .terreno-layout {
+    flex-direction: column;
+    padding: 24px 20px;
+    gap: 24px;
+  }
+
+  .terreno-cards {
+    width: 100%;
+  }
+
+  .terreno-card {
+    width: 100%;
+  }
+
+  .terreno-map {
+    min-height: 400px;
+  }
+
+  .terreno-stat__value {
+    font-size: 2.2rem;
+  }
+
+  .terreno-stat__value span:last-child {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .terreno-layout {
+    padding: 16px;
+  }
+
+  .terreno-map {
+    min-height: 300px;
+  }
+
+  .terreno-stat__value {
+    font-size: 1.8rem;
+  }
+
+  .terreno-stat__value span:last-child {
+    font-size: 1rem;
+  }
+}
