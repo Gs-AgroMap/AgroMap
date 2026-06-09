@@ -228,3 +228,4 @@ Este projeto foi desenvolvido exclusivamente para fins acadêmicos no contexto d
 <p align="center">
 🌱 AgroMap • FIAP 2026 • Global Solution
 </p>
+
