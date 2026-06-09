@@ -38,94 +38,94 @@
 
     </nav>
 
+<main class="relatorio-container">
 
-    <div class="relatorio-container">
+  <header class="relatorio-header">
+    <h1>Relatório da fazenda</h1>
+    <p>Preencha as informações e exporte o relatório da sua propriedade</p>
+  </header>
 
-        <div class="relatorio-header">
-            <h1>Relatório da fazenda</h1>
-            <p>Preencha as informações e exporte o relatório da sua propriedade</p>
-        </div>
+  <section class="card" aria-labelledby="titulo-dados">
+    <h2 id="titulo-dados">Dados da propriedade</h2>
+    <fieldset class="form-grid">
+      <legend class="visually-hidden">Informações da propriedade</legend>
 
-        
-        <div class="card">
-            <h2>Dados da propriedade</h2>
-            <div class="form-grid">
-                <div class="form-group">
-                    <label>Nome da fazenda</label>
-                    <input type="text" id="nome-fazenda" placeholder="Ex: Fazenda São João">
-                </div>
-                <div class="form-group">
-                    <label>Proprietário</label>
-                    <input type="text" id="proprietario" placeholder="Nome do proprietário">
-                </div>
-                <div class="form-group">
-                    <label>Município</label>
-                    <input type="text" id="municipio" placeholder="Ex: Ribeirão Preto">
-                </div>
-                <div class="form-group">
-                    <label>Estado</label>
-                    <select id="estado">
-                        <option value="">Selecione...</option>
-                        <option>AC</option><option>AL</option><option>AM</option>
-                        <option>BA</option><option>CE</option><option>DF</option>
-                        <option>ES</option><option>GO</option><option>MA</option>
-                        <option>MG</option><option>MS</option><option>MT</option>
-                        <option>PA</option><option>PB</option><option>PE</option>
-                        <option>PI</option><option>PR</option><option>RJ</option>
-                        <option>RN</option><option>RO</option><option>RR</option>
-                        <option>RS</option><option>SC</option><option selected>SP</option>
-                        <option>SE</option><option>TO</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Área total (ha)</label>
-                    <input type="number" id="area" placeholder="Ex: 2.4">
-                </div>
-                <div class="form-group">
-                    <label>Perímetro (km)</label>
-                    <input type="number" id="perimetro" placeholder="Ex: 198">
-                </div>
-            </div>
-        </div>
+      <div class="form-group">
+        <label for="nome-fazenda">Nome da fazenda</label>
+        <input type="text" id="nome-fazenda" placeholder="Ex: Fazenda São João">
+      </div>
+      <div class="form-group">
+        <label for="proprietario">Proprietário</label>
+        <input type="text" id="proprietario" placeholder="Nome do proprietário">
+      </div>
+      <div class="form-group">
+        <label for="municipio">Município</label>
+        <input type="text" id="municipio" placeholder="Ex: Ribeirão Preto">
+      </div>
+      <div class="form-group">
+        <label for="estado">Estado</label>
+        <select id="estado">
+          <option value="">Selecione...</option>
+          <option>AC</option><option>AL</option><option>AM</option>
+          <option>BA</option><option>CE</option><option>DF</option>
+          <option>ES</option><option>GO</option><option>MA</option>
+          <option>MG</option><option>MS</option><option>MT</option>
+          <option>PA</option><option>PB</option><option>PE</option>
+          <option>PI</option><option>PR</option><option>RJ</option>
+          <option>RN</option><option>RO</option><option>RR</option>
+          <option>RS</option><option>SC</option><option selected>SP</option>
+          <option>SE</option><option>TO</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="area">Área total (ha)</label>
+        <input type="number" id="area" placeholder="Ex: 2.4">
+      </div>
+      <div class="form-group">
+        <label for="perimetro">Perímetro (km)</label>
+        <input type="number" id="perimetro" placeholder="Ex: 198">
+      </div>
+    </fieldset>
+  </section>
 
-        <div class="card">
-            <h2>Resumo do terreno</h2>
-            <div class="preview-grid">
-                <div class="preview-item">
-                    <span>Área do terreno</span>
-                    <strong id="preview-area">—</strong>
-                    <p>hectares</p>
-                </div>
-                <div class="preview-item">
-                    <span>Perímetro</span>
-                    <strong id="preview-perimetro">—</strong>
-                    <p>quilômetros</p>
-                </div>
-                <div class="preview-item">
-                    <span>Localização</span>
-                    <strong id="preview-local">—</strong>
-                    <p>município/estado</p>
-                </div>
-            </div>
-        </div>
+  <section class="card" aria-labelledby="titulo-resumo">
+    <h2 id="titulo-resumo">Resumo do terreno</h2>
+    <ul class="preview-grid">
+      <li class="preview-item">
+        <span>Área do terreno</span>
+        <strong id="preview-area">—</strong>
+        <p>hectares</p>
+      </li>
+      <li class="preview-item">
+        <span>Perímetro</span>
+        <strong id="preview-perimetro">—</strong>
+        <p>quilômetros</p>
+      </li>
+      <li class="preview-item">
+        <span>Localização</span>
+        <strong id="preview-local">—</strong>
+        <p>município/estado</p>
+      </li>
+    </ul>
+  </section>
 
-        
-        <div class="card">
-    <h2>Atividades registradas</h2>
+  <section class="card" aria-labelledby="titulo-atividades">
+    <h2 id="titulo-atividades">Atividades registradas</h2>
     <div id="atividades-lista">
-        <!-- preenchido pelo JS -->
+      <!-- preenchido pelo JS -->
     </div>
-</div>
+  </section>
 
-       
-        <div class="export-section">
-            <button class="btn-secondary" onclick="limparFormulario()">Limpar</button>
-            <button class="btn-export" onclick="exportarRelatorio()">↓ Exportar relatório</button>
-        </div>
+  <footer class="export-section">
+    <button class="btn-secondary" onclick="limparFormulario()">Limpar</button>
+    <button class="btn-export" onclick="exportarRelatorio()">↓ Exportar relatório</button>
+  </footer>
 
-    </div>
+</main>
 
-    <div class="toast" id="toast">Relatório exportado com sucesso!</div>
+<aside class="toast" id="toast" role="status" aria-live="polite">
+  Relatório exportado com sucesso!
+</aside>
 
     <script src="../js/relatorio.js"></script>
     <script src="../js/nav.js"></script>
