@@ -16,6 +16,28 @@ function atualizarLocal() {
 document.getElementById('municipio').addEventListener('input', atualizarLocal);
 document.getElementById('estado').addEventListener('change', atualizarLocal);
 
+function renderizarAtividadesRelatorio() {
+    const atividades = JSON.parse(localStorage.getItem('agromap_atividades') || '[]');
+    const lista = document.getElementById('atividades-lista');
+
+    lista.innerHTML = '';
+
+    if (atividades.length === 0) {
+        lista.innerHTML = '<p style="color: #888;">Nenhuma atividade registrada.</p>';
+        return;
+    }
+
+    atividades.forEach(a => {
+        const div = document.createElement('div');
+        div.className = 'atividade-row';
+        div.innerHTML = `
+            <span class="atividade-nome">${a.nome}</span>
+            <span class="atividade-badge">${a.porcentagem}%</span>
+        `;
+        lista.appendChild(div);
+    });
+}
+
 function exportarRelatorio() {
     const nome = document.getElementById('nome-fazenda').value || 'Fazenda';
     const proprietario = document.getElementById('proprietario').value || 'Não informado';
@@ -23,6 +45,11 @@ function exportarRelatorio() {
     const estado = document.getElementById('estado').value || '';
     const area = document.getElementById('area').value || '0';
     const perimetro = document.getElementById('perimetro').value || '0';
+
+    const atividades = JSON.parse(localStorage.getItem('agromap_atividades') || '[]');
+    const atividadesTexto = atividades.length > 0
+        ? atividades.map(a => `- ${a.nome}: ${a.porcentagem}%`).join('\n')
+        : '- Nenhuma atividade registrada';
 
     const conteudo = `RELATÓRIO DA PROPRIEDADE RURAL
 ==============================
@@ -36,10 +63,7 @@ Localização: ${municipio}${estado ? '/' + estado : ''}
 Perímetro: ${perimetro} km
 
 ATIVIDADES REGISTRADAS
-- Lavoura: 40%
-- Pastagem: 30%
-- Reserva legal: 20%
-- Área de preservação: 10%
+${atividadesTexto}
 
 ==============================
 Relatório gerado em ${new Date().toLocaleDateString('pt-BR')}
@@ -70,3 +94,5 @@ function limparFormulario() {
     document.getElementById('preview-perimetro').textContent = '—';
     document.getElementById('preview-local').textContent = '—';
 }
+
+renderizarAtividadesRelatorio();

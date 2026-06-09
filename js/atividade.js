@@ -14,7 +14,7 @@ function getPorcentagemUsada(atividades) {
     return atividades.reduce((soma, a) => soma + a.porcentagem, 0);
 }
 
-function criarCard(atividade, areaTotal) {
+function criarCard(atividade, areaTotal, index) {
     const areaOcupada = Math.round((atividade.porcentagem / 100) * areaTotal);
 
     const li = document.createElement('li');
@@ -52,7 +52,18 @@ function criarCard(atividade, areaTotal) {
     descText.className = 'atividade-card__desc';
     descText.textContent = atividade.descricao || '—';
 
-    right.append(descLabel, descText);
+    const btnDeletar = document.createElement('button');
+    btnDeletar.type = 'button';
+    btnDeletar.className = 'btn-deletar';
+    btnDeletar.textContent = 'Excluir';
+    btnDeletar.addEventListener('click', () => {
+        const atividades = getAtividades();
+        atividades.splice(index, 1);
+        salvarAtividades(atividades);
+        renderizarAtividades();
+    });
+
+    right.append(descLabel, descText, btnDeletar);
     li.append(left, right);
 
     return li;
@@ -64,7 +75,7 @@ function renderizarAtividades() {
     const areaTotal = getAreaTotal();
 
     lista.innerHTML = '';
-    atividades.forEach(a => lista.appendChild(criarCard(a, areaTotal)));
+    atividades.forEach((a, index) => lista.appendChild(criarCard(a, areaTotal, index)));
 }
 
 document.getElementById('form-atividade').addEventListener('submit', function (e) {
