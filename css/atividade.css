@@ -99,7 +99,22 @@
 #btn-criar-atividade{
     width: 1700px;
 }
+.btn-deletar {
+    background: #e53e3e;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.2s;
+}
 
+.btn-deletar:hover {
+    background: #c53030;
+}
 /* ── Responsivo ── */
 @media (max-width: 1024px) {
   .atividade-section {

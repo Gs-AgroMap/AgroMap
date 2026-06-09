@@ -1,142 +1,134 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="PT-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relatório da Fazenda</title>
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/relatorio.css" />
-  </head>
-  <body>
-    <nav class="navbar">
-      <ul class="navbar-nav" style="list-style: none; margin: 0; padding: 0">
-        <li><a class="nav-link" href="../index.html">Início</a></li>
-        <li><a class="nav-link" href="sobre.html">Sobre</a></li>
-        <li><a class="nav-link" href="integrantes.html">Integrantes</a></li>
-        <li><a class="nav-link" href="meuterreno.html">Meu terreno</a></li>
-        <li><a class="nav-link" href="atividades.html">Atividades</a></li>
-        <li><a class="nav-link" href="faq.html">FAQ</a></li>
-        <li><a class="nav-link active" href="relatorio.html">Relatório</a></li>
-        <li><a class="nav-link" href="contato.html">Contato</a></li>
-      </ul>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/relatorio.css">
+    <link rel="icon" href="/assents/Group 1.svg">
+</head>
+<body>
+
+     <nav class="navbar">
+        <a href="index.html" class="navbar-logo">
+      <svg width="34" height="40" viewBox="0 0 56 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M47.9762 27.9048C47.9762 16.5681 38.8692 7.42857 27.7007 7.42857C16.5328 7.42866 7.42857 16.5675 7.42857 27.9048C7.42857 35.0785 11.7476 42.5605 17.0473 48.5275C19.6419 51.4488 22.3311 53.8461 24.5446 55.4835C25.6554 56.3052 26.5907 56.8943 27.2892 57.2591C27.4559 57.3462 27.5927 57.4102 27.7007 57.4588C27.8086 57.4102 27.9456 57.3463 28.1124 57.2591C28.811 56.8942 29.7467 56.3049 30.8577 55.4832C33.0715 53.8458 35.7612 51.4487 38.3561 48.5275C43.6566 42.5604 47.9762 35.0783 47.9762 27.9048ZM55.4048 27.9048C55.4048 37.7951 49.6459 47.0035 43.9099 53.4609C40.9866 56.7518 37.9186 59.5004 35.275 61.4557C33.9573 62.4303 32.6891 63.2493 31.5517 63.8434C30.5947 64.3433 29.1586 65 27.7007 65C26.2427 64.9999 24.8068 64.3433 23.8499 63.8434C22.7126 63.2493 21.4445 62.4303 20.127 61.4557C17.4837 59.5004 14.416 56.7515 11.4931 53.4606C5.75789 47.0031 2.09492e-06 37.7949 0 27.9048C0 12.5249 12.3703 9.11382e-05 27.7007 0C43.0304 0 55.4048 12.5242 55.4048 27.9048Z" fill="#1F7A36"/>
+        <path d="M35.6347 25.2483C14.1538 30.2769 14.5306 46.5816 16.1888 53.8197L23.1984 54.9626C16.5054 45.454 23.2738 37.5911 27.4946 34.8483C24.1782 40.8673 19.5353 51.6254 27.4946 46.5054C35.4538 41.3854 36.8406 30.5054 35.6347 25.2483Z" fill="#1F7A36"/>
+        <path d="M35.807 25.2089C36.4175 27.8706 36.3695 31.9359 35.171 35.9787C33.9719 40.0236 31.6151 44.0649 27.5901 46.6541C26.5889 47.2982 25.7747 47.7003 25.1232 47.8912C24.4749 48.0811 23.9568 48.0706 23.5787 47.8418C23.1968 47.6106 23.0084 47.188 22.9469 46.6752C22.8853 46.1616 22.9462 45.5266 23.093 44.8181C23.6382 42.1862 25.4075 38.3573 26.9866 35.4128C25.0035 36.8547 22.656 39.3037 21.4183 42.4334C20.0566 45.8764 20.0317 50.1563 23.3431 54.8607L23.5853 55.2047L16.043 53.9753L16.0164 53.8592C15.1828 50.2204 14.6681 44.293 17.0718 38.6362C19.4804 32.9681 24.8065 27.6013 35.5942 25.0759L35.7673 25.0355L35.807 25.2089ZM35.5002 25.4625C24.925 27.9823 19.743 33.2543 17.3972 38.7748C15.059 44.2776 15.5266 50.056 16.3353 53.664L22.818 54.7215C19.6738 50.0506 19.7184 45.7698 21.0894 42.3032C22.4892 38.7637 25.2652 36.0858 27.398 34.6998L27.6495 34.9337C25.9918 37.9424 24.014 42.1164 23.4395 44.8899C23.2961 45.5823 23.2429 46.1743 23.2979 46.6331C23.3529 47.0925 23.5117 47.3877 23.7618 47.5392C24.0159 47.693 24.4155 47.7298 25.0237 47.5516C25.6287 47.3744 26.4103 46.9925 27.3987 46.3567C31.3329 43.826 33.6495 39.8674 34.8321 35.8782C35.9892 31.9751 36.0546 28.0608 35.5002 25.4625Z" fill="#1F7A36"/>
+      </svg>
+    </a>
+
+        <ul class="navbar-nav" style="list-style: none; margin: 0; padding: 0;">
+            <li><a class="nav-link" href="../index.html">Início</a></li>
+            <li><a class="nav-link" href="sobre.html">Sobre</a></li>
+            <li><a class="nav-link" href="integrantes.html">Integrantes</a></li>
+            <li><a class="nav-link" href="meuterreno.html">Meu terreno</a></li>
+            <li><a class="nav-link" href="atividades.html">Atividades</a></li>
+            <li><a class="nav-link" href="faq.html">FAQ</a></li>
+            <li><a class="nav-link active" href="relatorio.html">Relatório</a></li>
+            <li><a class="nav-link" href="contato.html">Contato</a></li>
+        </ul>
+         <button class="navbar-toggle" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  
+
     </nav>
 
+
     <div class="relatorio-container">
-      <div class="relatorio-header">
-        <h1>Relatório da fazenda</h1>
-        <p>Preencha as informações e exporte o relatório da sua propriedade</p>
-      </div>
 
-      <div class="card">
-        <h2>Dados da propriedade</h2>
-        <div class="form-grid">
-          <div class="form-group">
-            <label>Nome da fazenda</label>
-            <input
-              type="text"
-              id="nome-fazenda"
-              placeholder="Ex: Fazenda São João"
-            />
-          </div>
-          <div class="form-group">
-            <label>Proprietário</label>
-            <input
-              type="text"
-              id="proprietario"
-              placeholder="Nome do proprietário"
-            />
-          </div>
-          <div class="form-group">
-            <label>Município</label>
-            <input
-              type="text"
-              id="municipio"
-              placeholder="Ex: Ribeirão Preto"
-            />
-          </div>
-          <div class="form-group">
-            <label>Estado</label>
-            <select id="estado">
-              <option value="">Selecione...</option>
-              <option>AC</option>
-              <option>AL</option>
-              <option>AM</option>
-              <option>BA</option>
-              <option>CE</option>
-              <option>DF</option>
-              <option>ES</option>
-              <option>GO</option>
-              <option>MA</option>
-              <option>MG</option>
-              <option>MS</option>
-              <option>MT</option>
-              <option>PA</option>
-              <option>PB</option>
-              <option>PE</option>
-              <option>PI</option>
-              <option>PR</option>
-              <option>RJ</option>
-              <option>RN</option>
-              <option>RO</option>
-              <option>RR</option>
-              <option>RS</option>
-              <option>SC</option>
-              <option selected>SP</option>
-              <option>SE</option>
-              <option>TO</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Área total (ha)</label>
-            <input type="number" id="area" placeholder="Ex: 2.4" />
-          </div>
-          <div class="form-group">
-            <label>Perímetro (km)</label>
-            <input type="number" id="perimetro" placeholder="Ex: 198" />
-          </div>
+        <div class="relatorio-header">
+            <h1>Relatório da fazenda</h1>
+            <p>Preencha as informações e exporte o relatório da sua propriedade</p>
         </div>
-      </div>
 
-      <div class="card">
-        <h2>Resumo do terreno</h2>
-        <div class="preview-grid">
-          <div class="preview-item">
-            <span>Área do terreno</span>
-            <strong id="preview-area">—</strong>
-            <p>hectares</p>
-          </div>
-          <div class="preview-item">
-            <span>Perímetro</span>
-            <strong id="preview-perimetro">—</strong>
-            <p>quilômetros</p>
-          </div>
-          <div class="preview-item">
-            <span>Localização</span>
-            <strong id="preview-local">—</strong>
-            <p>município/estado</p>
-          </div>
+        
+        <div class="card">
+            <h2>Dados da propriedade</h2>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Nome da fazenda</label>
+                    <input type="text" id="nome-fazenda" placeholder="Ex: Fazenda São João">
+                </div>
+                <div class="form-group">
+                    <label>Proprietário</label>
+                    <input type="text" id="proprietario" placeholder="Nome do proprietário">
+                </div>
+                <div class="form-group">
+                    <label>Município</label>
+                    <input type="text" id="municipio" placeholder="Ex: Ribeirão Preto">
+                </div>
+                <div class="form-group">
+                    <label>Estado</label>
+                    <select id="estado">
+                        <option value="">Selecione...</option>
+                        <option>AC</option><option>AL</option><option>AM</option>
+                        <option>BA</option><option>CE</option><option>DF</option>
+                        <option>ES</option><option>GO</option><option>MA</option>
+                        <option>MG</option><option>MS</option><option>MT</option>
+                        <option>PA</option><option>PB</option><option>PE</option>
+                        <option>PI</option><option>PR</option><option>RJ</option>
+                        <option>RN</option><option>RO</option><option>RR</option>
+                        <option>RS</option><option>SC</option><option selected>SP</option>
+                        <option>SE</option><option>TO</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Área total (ha)</label>
+                    <input type="number" id="area" placeholder="Ex: 2.4">
+                </div>
+                <div class="form-group">
+                    <label>Perímetro (km)</label>
+                    <input type="number" id="perimetro" placeholder="Ex: 198">
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div class="card">
-        <h2>Atividades registradas</h2>
-        <div id="atividades-lista">
-          <!-- preenchido pelo JS -->
+        <div class="card">
+            <h2>Resumo do terreno</h2>
+            <div class="preview-grid">
+                <div class="preview-item">
+                    <span>Área do terreno</span>
+                    <strong id="preview-area">—</strong>
+                    <p>hectares</p>
+                </div>
+                <div class="preview-item">
+                    <span>Perímetro</span>
+                    <strong id="preview-perimetro">—</strong>
+                    <p>quilômetros</p>
+                </div>
+                <div class="preview-item">
+                    <span>Localização</span>
+                    <strong id="preview-local">—</strong>
+                    <p>município/estado</p>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div class="export-section">
-        <button class="btn-secondary" onclick="limparFormulario()">
-          Limpar
-        </button>
-        <button class="btn-export" onclick="exportarRelatorio()">
-          ↓ Exportar relatório
-        </button>
-      </div>
+        
+        <div class="card">
+    <h2>Atividades registradas</h2>
+    <div id="atividades-lista">
+        <!-- preenchido pelo JS -->
+    </div>
+</div>
+
+       
+        <div class="export-section">
+            <button class="btn-secondary" onclick="limparFormulario()">Limpar</button>
+            <button class="btn-export" onclick="exportarRelatorio()">↓ Exportar relatório</button>
+        </div>
+
     </div>
 
     <div class="toast" id="toast">Relatório exportado com sucesso!</div>
 
     <script src="../js/relatorio.js"></script>
-  </body>
+    <script src="../js/nav.js"></script>
+
+</body>
 </html>
