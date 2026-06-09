@@ -102,6 +102,11 @@
     font-size: 13px;
     color: #666;
 }
+.preview-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
 /* Atividades */
 .atividade-row {
